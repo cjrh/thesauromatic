@@ -36,8 +36,3 @@ Features
   download an executable for your target platform.
 - Fast; takes about 90 ms to emit the words. This makes it easy to drive from
   your editor, and will work offline.
-
-About
------
-
-The word relationships come from the
