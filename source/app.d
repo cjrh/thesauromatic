@@ -4,23 +4,14 @@ import std.getopt;
 import std.algorithm.setops;
 import std.algorithm.iteration;
 import std.algorithm.searching;
+import std.algorithm.sorting;
 import std.typecons;
 import std.array;
 import std.range;
-import std.file: slurp;
+import std.file: slurp, readText, read;
 import std.conv;
 import std.format;
-
-private immutable string mobylf = import("mobylf.txt");
-static immutable string[string] data;
-
-static this() {
-    Tuple!(string, string, string) r;
-    foreach (line; mobylf.lineSplitter()) {
-        r = line.findSplit(",");
-        data[r[0]] = r[2];
-    }
-}
+import std.uni;
 
 void main(string[] args)
 {
@@ -45,7 +36,27 @@ void main(string[] args)
 }
 
 private string syns(const string word) {
-    if ((word in data) is null)
-        return "";
-    return data[word].replace(",", "\n");
+    /* string[30260] lines; */
+    /* string[] lines; */
+    /* lines.length = 30_260; */
+    auto f = File("source/mobylf.txt");
+    /* auto items = assumeSorted("source/mobylf.txt".readText.splitLines()); */
+    /* writeln(items[0..2]); */
+    auto wd = word ~ ",";
+    foreach (line; f.byLine()) {
+        /* auto r = line.idup.findSplit(","); */
+        /* data[r[0]] = r[2]; */
+        /* lines[i] = line.idup; */
+        if (line.startsWith(wd)) {
+            string items = line.idup.findSplit(",")[2];
+            return items.replace(",", "\n");
+        }
+    }
+    return "";
+    /* auto items = assumeSorted(lines[]); */
+    /* auto found = items.equalRange(x => x.startsWith(word)); */
+
+    /* if ((word in data) is null) */
+    /*     return ""; */
+    /* return data[word].replace(",", "\n"); */
 }
