@@ -1,11 +1,13 @@
 thesauromatic
 =============
 
-Command-line CLI thesaurus
+Zero-dependency command-line CLI thesaurus
 
 Demo
 ----
 
+Pretty much just give it a word, and you get a bunch of similar or
+related words back:
 
 .. code-block:: bash
 
@@ -26,3 +28,16 @@ Demo
    whelm
    whelming
 
+Features
+--------
+
+- Synonyms from the `Moby project <https://en.wikipedia.org/wiki/Moby_Project>`_
+- Statically compiled, word lists are linked in. No dependencies. Just
+  download an executable for your target platform.
+- Fast; takes about 90 ms to emit the words. This makes it easy to drive from
+  your editor, and will work offline.
+
+About
+-----
+
+The word relationships come from the
