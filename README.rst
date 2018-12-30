@@ -100,3 +100,14 @@ into columns?
    disrespectful   kidding         scornful        unthinking
    easygoing       lazy            shallow         wise-ass
 
+Perhaps you're also trying to complete an
+`alliteration <https://en.wikipedia.org/wiki/Alliteration>` on the
+letter ``r``?
+
+.. code-block:: bash
+
+   $ ./thesauromatic flippant | grep ^r | column -c70
+   ragging         razzing         respectless     rude
+   railing         reckless        ridiculing
+   rallying        regardless      roasting
+
