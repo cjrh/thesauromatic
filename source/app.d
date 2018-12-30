@@ -36,27 +36,13 @@ void main(string[] args)
 }
 
 private string syns(const string word) {
-    /* string[30260] lines; */
-    /* string[] lines; */
-    /* lines.length = 30_260; */
     auto f = File("source/mobylf.txt");
-    /* auto items = assumeSorted("source/mobylf.txt".readText.splitLines()); */
-    /* writeln(items[0..2]); */
     auto wd = word ~ ",";
     foreach (line; f.byLine()) {
-        /* auto r = line.idup.findSplit(","); */
-        /* data[r[0]] = r[2]; */
-        /* lines[i] = line.idup; */
         if (line.startsWith(wd)) {
             string items = line.idup.findSplit(",")[2];
             return items.replace(",", "\n");
         }
     }
     return "";
-    /* auto items = assumeSorted(lines[]); */
-    /* auto found = items.equalRange(x => x.startsWith(word)); */
-
-    /* if ((word in data) is null) */
-    /*     return ""; */
-    /* return data[word].replace(",", "\n"); */
 }
