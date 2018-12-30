@@ -1,0 +1,10 @@
+{
+	"description": "Command-line thesaurus",
+	"license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3",
+	"authors": [
+		"Caleb Hattingh"
+	],
+	"copyright": "Copyright © 2018, Caleb Hattingh",
+	"name": "thesauromatic",
+	"dflags-dmd": ["-Jsource", "-J."]
+}
