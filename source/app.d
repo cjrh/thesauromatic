@@ -13,6 +13,8 @@ import std.conv;
 import std.format;
 import std.uni;
 
+private static immutable data = import("mobylf.txt");
+
 void main(string[] args)
 {
     auto helpInformation = getopt(args);
@@ -36,9 +38,10 @@ void main(string[] args)
 }
 
 private string syns(const string word) {
-    auto f = File("source/mobylf.txt");
     auto wd = word ~ ",";
-    foreach (line; f.byLine()) {
+    /* auto f = File("source/mobylf.txt"); */
+    /* foreach (line; f.byLine()) { */
+    foreach (line; data.lineSplitter) {
         if (line.startsWith(wd)) {
             string items = line.idup.findSplit(",")[2];
             return items.replace(",", "\n");
