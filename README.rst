@@ -44,13 +44,13 @@ Features
 - Synonyms from the `Moby project <https://en.wikipedia.org/wiki/Moby_Project>`_
 - Statically compiled, word lists are linked in. No dependencies. Just
   download an executable for your target platform.
-- Fast; takes about 90 ms to emit the words. This makes it easy to drive from
+- Fast; takes about 40 ms to emit the words. This makes it easy to drive from
   your editor, and will work offline.
 
 Install
 -------
 
-Just download the executable. Check out the _Releases_ tab.
+Just download the executable. Check out the *Releases* tab.
 
 Dev
 ---
