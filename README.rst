@@ -63,7 +63,7 @@ changes:
 .. code-block:: bash
 
    $ bumpversion patch
-   $ git push
+   $ git push --tags origin master
 
 Then go to `<https://github.com/cjrh/thesauromatic/releases>`_ and
 create a new release, using the same tag as the one created
