@@ -5,7 +5,7 @@
 ..     :target: https://github.com/cjrh/thesauromatic/releases/download/1%2C0%2C0/pwrgen.exe
 
 .. image:: https://img.shields.io/badge/download-linux-green.svg?logo=linux
-    :target: https://github.com/cjrh/thesauromatic/releases/download/v0.0.1/thesauromatic
+    :target: https://github.com/cjrh/thesauromatic/releases/download/v0.0.2/thesauromatic
 
 
 thesauromatic
