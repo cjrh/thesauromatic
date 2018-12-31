@@ -4,9 +4,11 @@
 .. .. image:: https://img.shields.io/badge/download-windows-green.svg?logo=windows
 ..     :target: https://github.com/cjrh/thesauromatic/releases/download/1%2C0%2C0/pwrgen.exe
 
+.. image:: https://img.shields.io/badge/download-windows-green.svg?logo=windows
+    :target: https://github.com/cjrh/thesauromatic/releases/download/v0.0.3/thesauromatic.exe
+
 .. image:: https://img.shields.io/badge/download-linux-green.svg?logo=linux
     :target: https://github.com/cjrh/thesauromatic/releases/download/v0.0.3/thesauromatic
-
 
 thesauromatic
 =============
