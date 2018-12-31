@@ -116,7 +116,7 @@ into columns?
    easygoing       lazy            shallow         wise-ass
 
 Perhaps you're also trying to complete an
-`alliteration <https://en.wikipedia.org/wiki/Alliteration>` on the
+`alliteration <https://en.wikipedia.org/wiki/Alliteration>`_ on the
 letter ``r``?
 
 .. code-block:: bash
