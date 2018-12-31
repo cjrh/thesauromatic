@@ -52,16 +52,31 @@ Install
 
 Just download the executable. Check out the *Releases* tab.
 
-Dev
----
+Making a new release
+--------------------
 
-To build a release version, use ``dub``:
+To make a new release, use the tool *bumpversion* to increase the
+version number; this will update the version number in all the right
+places, commit that, and add a matching git tag. Then push those
+changes:
+
+.. code-block:: bash
+
+   $ bumpversion patch
+   $ git push
+
+Then go to `<https://github.com/cjrh/thesauromatic/releases>`_ and
+create a new release, using the same tag as the one created
+above.
+
+To build a release binary, use ``dub``:
 
 .. code-block:: bash
 
    $ dub build --build=release
 
-Same for dev, but use "debug" instead of "release" above.
+Then upload that binary into the github release just created.
+
 
 Tips & Tricks
 -------------
