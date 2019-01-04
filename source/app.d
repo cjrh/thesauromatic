@@ -49,3 +49,11 @@ private string syns(const string word) {
     }
     return "";
 }
+
+/*
+
+Just using system utilities, this is easier AND faster!
+
+    $ cat mobylf.txt | grep -P '^zoom,' | tr ',' '\n' | tail -n+2
+
+*/
