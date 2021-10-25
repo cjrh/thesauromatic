@@ -22,3 +22,8 @@ docs/
 
 # Code coverage
 *.lst
+
+
+# Added by cargo
+
+/target
