@@ -1,8 +1,8 @@
+use std::collections::BTreeSet;
 use std::env;
 use std::fs::File;
-use std::io::{BufWriter, BufReader, BufRead, Write};
+use std::io::{BufRead, BufReader, BufWriter, Write};
 use std::path::Path;
-use std::collections::BTreeSet;
 
 fn main() {
     let path = Path::new(&env::var("OUT_DIR").unwrap()).join("codegen.rs");
@@ -26,7 +26,8 @@ fn main() {
     let mut file = BufWriter::new(File::create(&path).unwrap());
     writeln!(
         &mut file,
-         "static KEYWORDS: phf::Map<&'static str, &'static str> = \n{};\n",
-         m.build()
-             ).unwrap();
+        "static KEYWORDS: phf::Map<&'static str, &'static str> = \n{};\n",
+        m.build()
+    )
+    .unwrap();
 }

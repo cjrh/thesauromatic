@@ -3,9 +3,7 @@ include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
 pub fn lookup(word: &str) -> Vec<String> {
     match KEYWORDS.get(word) {
         None => vec![],
-        Some(synonyms) => {
-            synonyms.split(',').map(|s| s.to_owned()).collect()
-        }
+        Some(synonyms) => synonyms.split(',').map(|s| s.to_owned()).collect(),
     }
 }
 
