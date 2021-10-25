@@ -23,14 +23,6 @@ fn main() {
             }
         });
 
-    // m.entry("loop", "Keyword::Loop")
-    //          .entry("continue", "Keyword::Continue")
-    //          .entry("break", "Keyword::Break")
-    //          .entry("fn", "Keyword::Fn")
-    //          .entry("extern", "Keyword::Extern");
-
-    // m.build();
-
     let mut file = BufWriter::new(File::create(&path).unwrap());
     writeln!(
         &mut file,
