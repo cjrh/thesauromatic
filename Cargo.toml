@@ -14,7 +14,7 @@ homepage = "https://github.com/cjrh/thesauromatic"
 documentation = "https://github.com/cjrh/thesauromatic"
 repository = "https://github.com/cjrh/thesauromatic"
 readme = "README.md"
-keywords = ["thesaurus", "synonyms", "nlp", "natural language"]
+keywords = ["thesaurus", "synonyms", "nlp", "natural-language"]
 categories = [
     "text-processing",
 ]
