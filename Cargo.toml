@@ -14,6 +14,17 @@ homepage = "https://github.com/cjrh/thesauromatic"
 documentation = "https://github.com/cjrh/thesauromatic"
 repository = "https://github.com/cjrh/thesauromatic"
 readme = "README.md"
+keywords = ["thesaurus", "synonyms", "nlp", "natural language"]
+categories = [
+    "text-processing",
+]
+exclude = [
+    "google-books-common-words-lower.csv",
+    "words.txt"
+]
+
+[badges]
+maintenance = { status = "passively-maintained" }
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
