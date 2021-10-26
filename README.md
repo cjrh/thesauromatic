@@ -1,7 +1,5 @@
 [![image](https://img.shields.io/badge/License-AGPL%203-purple.svg)](https://opensource.org/licenses/AGPL-3.0)
-
 [![image](https://img.shields.io/badge/download-windows-green.svg?logo=windows)](https://github.com/cjrh/thesauromatic/releases/latest/download/thesauromatic.exe)
-
 [![image](https://img.shields.io/badge/download-linux-green.svg?logo=linux)](https://github.com/cjrh/thesauromatic/releases/latest/download/thesauromatic)
 
 thesauromatic
