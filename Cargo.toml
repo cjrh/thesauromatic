@@ -1,9 +1,9 @@
 [package]
 name = "thesauromatic"
-version = "0.0.8"
+version = "0.0.9"
 edition = "2021"
-licence = "AGPL-3.0"
-licence-file = "LICENCE"
+license = "AGPL-3.0"
+license-file = "LICENCE"
 description = """
 thesauromatic is a command-line thesaurus that returns
 related words when given a word. The output words are
