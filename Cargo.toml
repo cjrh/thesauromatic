@@ -1,6 +1,6 @@
 [package]
 name = "thesauromatic"
-version = "0.0.7"
+version = "0.0.8"
 edition = "2021"
 licence = "AGPL-3.0"
 licence-file = "LICENCE"
