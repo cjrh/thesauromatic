@@ -2,6 +2,18 @@
 name = "thesauromatic"
 version = "0.0.5"
 edition = "2021"
+licence = "AGPL-3.0"
+licence-file = "LICENCE"
+description = """
+thesauromatic is a command-line thesaurus that returns
+related words when given a word. The output words are
+one per line, making it easy to process in shell
+pipelines.
+"""
+homepage = "https://github.com/cjrh/thesauromatic"
+documentation = "https://github.com/cjrh/thesauromatic"
+repository = "https://github.com/cjrh/thesauromatic"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
