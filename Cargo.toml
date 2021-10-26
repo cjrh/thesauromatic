@@ -3,7 +3,7 @@ name = "thesauromatic"
 version = "0.0.9"
 edition = "2021"
 license = "AGPL-3.0"
-license-file = "LICENCE"
+license-file = "LICENSE"
 description = """
 thesauromatic is a command-line thesaurus that returns
 related words when given a word. The output words are
