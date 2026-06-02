@@ -30,4 +30,27 @@ fn main() {
         m.build()
     )
     .unwrap();
+
+    link_binary_without_pie();
+}
+
+/// Link the CLI binary as a non-PIE executable on Linux.
+///
+/// The embedded word table is a `phf::Map` of ~30k `&'static str` keys and
+/// values. In a position-independent executable, every one of those ~60k
+/// pointers becomes a load-time relocation that the dynamic linker must apply
+/// before `main` runs — which dominated the program's startup cost. Linking
+/// the binary as non-PIE lets the linker bake those addresses in at link time,
+/// removing essentially all of the relocations and bringing startup down to
+/// the process-spawn floor.
+///
+/// `rustc-link-arg-bins` scopes this to binary targets only, so the `pycrate`
+/// `cdylib` (which must stay position-independent) is unaffected. `-no-pie` is
+/// a GNU/ELF linker flag, so it is emitted only for Linux targets; macOS and
+/// Windows keep their default linking.
+fn link_binary_without_pie() {
+    let target_os = env::var("CARGO_CFG_TARGET_OS").unwrap_or_default();
+    if target_os == "linux" {
+        println!("cargo:rustc-link-arg-bins=-no-pie");
+    }
 }

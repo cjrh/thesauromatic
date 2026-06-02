@@ -39,7 +39,8 @@ Features
     project](https://en.wikipedia.org/wiki/Moby_Project)
 -   Statically compiled, word lists are linked in. No dependencies. Just
     download an executable for your target platform.
--   Fast; takes about 40 ms to emit the words. This makes it easy to
+-   Fast; emits the words in well under a millisecond (around 0.5 ms,
+    essentially the cost of starting a process). This makes it easy to
     drive from your editor, and will work offline.
 
 Install

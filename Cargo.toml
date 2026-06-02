@@ -38,9 +38,18 @@ bin-dir = "{bin}{binary-ext}"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-paw = "1.0.0"
 phf = "0.11"
-toml = "0.8"
 
 [build-dependencies]
 phf_codegen = "0.11"
+
+# Optimize the release binary for fast startup and small size. The bulk of the
+# binary is the embedded word table (read-only data), but LTO + a single
+# codegen unit shrink the code, `panic = "abort"` drops unwinding tables, and
+# `strip` removes symbols — all of which reduce what the loader maps at launch.
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = 3

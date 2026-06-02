@@ -1,0 +1,38 @@
+abbandono
+accrescendo
+affettuoso
+agilmente
+agitato
+amabile
+amoroso
+appassionatamente
+appassionato
+brillante
+capriccioso
+con affetto
+con agilita
+con agitazione
+con amore
+crescendo
+decrescendo
+diminuendo
+dolce
+forte
+fortissimo
+lamentabile
+leggiero
+morendo
+parlando
+pianissimo
+piano
+pizzicato
+scherzando
+scherzoso
+sordo
+sotto voce
+spiccato
+staccato
+stretto
+tremolando
+tremoloso
+trillando
