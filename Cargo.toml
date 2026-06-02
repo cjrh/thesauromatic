@@ -30,8 +30,8 @@ maintenance = { status = "passively-maintained" }
 
 [dependencies]
 paw = "1.0.0"
-phf = "0.10.0"
-toml = "0.5.8"
+phf = "0.11"
+toml = "0.8"
 
 [build-dependencies]
-phf_codegen = "0.10.0"
+phf_codegen = "0.11"
