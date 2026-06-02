@@ -26,6 +26,16 @@ exclude = [
 [badges]
 maintenance = { status = "passively-maintained" }
 
+# cargo-binstall metadata: tells `cargo binstall thesauromatic` where to find the
+# prebuilt binaries produced by the Release workflow. The URL/layout matches what
+# taiki-e/upload-rust-binary-action emits: an asset named `{name}-{target}.{ext}`
+# attached to the `v{version}` GitHub Release, with the binary at the archive root.
+# `pkg-fmt` is intentionally omitted so binstall accepts both .tar.gz (unix) and
+# .zip (Windows).
+[package.metadata.binstall]
+pkg-url = "{repo}/releases/download/v{version}/{name}-{target}{archive-suffix}"
+bin-dir = "{bin}{binary-ext}"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

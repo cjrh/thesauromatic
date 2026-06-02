@@ -1,0 +1,13 @@
+# cargo-release configuration.
+#
+# `cargo release <level> --execute` (run locally) bumps the version, commits,
+# publishes to crates.io with the developer's own token, then creates and pushes
+# the `vX.Y.Z` tag. That pushed tag is what triggers the Release workflow in CI
+# to build and attach the prebuilt binaries.
+#
+# `publish`, `tag`, and `push` are left at their defaults (all true) — exactly the
+# local-publish + tag + push behaviour we want. Only the deviations are set here.
+
+allow-branch = ["master"]
+tag-name = "v{{version}}"
+pre-release-commit-message = "chore: release {{version}}"

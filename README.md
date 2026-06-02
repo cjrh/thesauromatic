@@ -45,31 +45,39 @@ Features
 Install
 -------
 
-Just download the executable. Check out the *Releases* tab.
+Install from [crates.io](https://crates.io/crates/thesauromatic) with
+either of the following.
+
+Build from source with cargo:
+
+``` {.bash}
+$ cargo install thesauromatic
+```
+
+Or download a prebuilt binary with
+[cargo-binstall](https://github.com/cargo-bins/cargo-binstall) (no
+compilation, just fetches the release artifact for your platform):
+
+``` {.bash}
+$ cargo binstall thesauromatic
+```
+
+Alternatively, grab the executable directly from the *Releases* tab.
 
 Making a new release
 --------------------
 
-To make a new release, use the tool *bumpversion* to increase the
-version number; this will update the version number in all the right
-places, commit that, and add a matching git tag. Then push those
-changes:
+Releases are driven by [cargo-release](https://github.com/crate-ci/cargo-release):
 
 ``` {.bash}
-$ bumpversion patch
-$ git push --tags origin master
+$ cargo release patch --execute
 ```
 
-Then go to <https://github.com/cjrh/thesauromatic/releases> and create a
-new release, using the same tag as the one created above.
-
-To build a release binary, use `dub`:
-
-``` {.bash}
-$ dub build --build=release
-```
-
-Then upload that binary into the github release just created.
+This bumps the version, commits, publishes to crates.io, and creates and
+pushes a matching `vX.Y.Z` tag. Pushing that tag triggers the *Release*
+workflow, which builds the prebuilt binaries and attaches them to a new
+GitHub Release. `cargo binstall` then finds those binaries via the
+`[package.metadata.binstall]` entry in `Cargo.toml`.
 
 Tips & Tricks
 -------------
