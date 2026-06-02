@@ -16,5 +16,5 @@ crate-type = ["cdylib"]
 thesauromatic = { path = ".." }
 
 [dependencies.pyo3]
-version = "0.15.1"
+version = "0.24.1"
 features = ["extension-module", "abi3-py38"]
