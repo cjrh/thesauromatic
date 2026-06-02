@@ -16,5 +16,6 @@ crate-type = ["cdylib"]
 thesauromatic = { path = ".." }
 
 [dependencies.pyo3]
-version = "0.24.1"
-features = ["extension-module", "abi3-py38"]
+version = "0.28"
+# `abi3-py39` builds a single wheel compatible with CPython 3.9+ (3.8 is EOL).
+features = ["extension-module", "abi3-py39"]
